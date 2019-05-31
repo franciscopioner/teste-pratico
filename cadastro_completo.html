@@ -8,58 +8,52 @@
 	<link rel="stylesheet" href="css/style.css">
     <title>Cadastro Completo</title>
   </head>
-  <body>
+  <body class="bg_cadastro_completo">
 	
 	<div class="container">
-		<div class="flex-row">
-			<div class="col-md-4 float-left">
-				<img class="imagem02 mb-3" src="imgs/imagem02.jpg" alt="Estudante">
+		<h1><span class="azul_zuna">Finalize</span> seu cadastro</h1>
+		<form class="needs-validation" action="php/finaliza_cadastro.php" method="post">
+		  <div class="form-row">
+			<div class="form-label-group col-md-4">
+			   <input type="text" id="dataNascimento" name="dataNascimento" class="form-control" placeholder="Data de nascimento" autofocus="" required>
+			   <label for="dataNascimento" class="pl-3">Data de nascimento</label>
 			</div>
-			<div class="col-md-8 float-right">
-				<form class="needs-validation" action="php/finaliza_cadastro.php" method="post">
-				  <div class="form-row">
-					<div class="form-label-group col-md-4">
-					   <input type="text" id="dataNascimento" name="dataNascimento" class="form-control" placeholder="Data de nascimento" autofocus="" required>
-					   <label for="dataNascimento" class="pl-3">Data de nascimento</label>
-					</div>
-					<div class="form-label-group col-md-8">
-					   <select id="universadade" name="universadade" class="form-control form-control-lg" placeholder="Universidade" autofocus="" required>
-						  <option class="form-control"></option>
-						  <option class="form-control">Universidade 01</option>
-						  <option class="form-control">Universidade 02</option>
-						  <option class="form-control">Universidade 03</option>
-					   </select>
-					   <label for="universadade">Universidade</label>
-					</div>
-				  </div>
-				  <div class="form-row">
-					<div class="form-label-group col-md-5">
-					   <input type="text" id="curso" name="curso" class="form-control" placeholder="Curso" autofocus="" required>
-					   <label for="curso" class="pl-3">Curso</label>
-					</div>
-					<div class="form-label-group col-md-4">
-					   <input type="text" id="campus" name="campus" class="form-control" placeholder="Campus" autofocus="" required>
-					   <label for="campus" class="pl-3">Campus</label>
-					</div>
-					<div class="form-label-group col-md-3">
-					   <input type="text" id="turno" name="turno" class="form-control" placeholder="Turno" autofocus="" required>
-					   <label for="turno" class="pl-3">Turno</label>
-					</div>
-				  </div>
-				  <div class="form-row">
-					<div class="form-label-group col-md-6">
-					   <input type="text" id="semestre" name="semestre" class="form-control" placeholder="Semestre" autofocus="" required>
-					   <label for="semestre" class="pl-3">Semestre</label>
-					</div>
-					<div class="form-label-group col-md-6">
-					   <input type="text" id="terminoDoCurso" name="terminoDoCurso" class="form-control" placeholder="Término do curso" autofocus="" required>
-					   <label for="terminoDoCurso" class="pl-3">Término previsto do curso</label>
-					</div>
-				  </div>
-				  <button class="btn btn-primary float-right" name="btnFinalizar" type="submit">Salvar</button>
-				</form>
+			<div class="form-label-group col-md-8">
+			   <select id="universadade" name="universadade" class="form-control form-control-lg" placeholder="Universidade" autofocus="" required>
+				  <option class="form-control"></option>
+				  <option class="form-control">Universidade 01</option>
+				  <option class="form-control">Universidade 02</option>
+				  <option class="form-control">Universidade 03</option>
+			   </select>
+			   <label for="universadade">Universidade</label>
 			</div>
-		</div>
+		  </div>
+		  <div class="form-row">
+			<div class="form-label-group col-md-5">
+			   <input type="text" id="curso" name="curso" class="form-control" placeholder="Curso" autofocus="" required>
+			   <label for="curso" class="pl-3">Curso</label>
+			</div>
+			<div class="form-label-group col-md-4">
+			   <input type="text" id="campus" name="campus" class="form-control" placeholder="Campus" autofocus="" required>
+			   <label for="campus" class="pl-3">Campus</label>
+			</div>
+			<div class="form-label-group col-md-3">
+			   <input type="text" id="turno" name="turno" class="form-control" placeholder="Turno" autofocus="" required>
+			   <label for="turno" class="pl-3">Turno</label>
+			</div>
+		  </div>
+		  <div class="form-row">
+			<div class="form-label-group col-md-6">
+			   <input type="text" id="semestre" name="semestre" class="form-control" placeholder="Semestre" autofocus="" required>
+			   <label for="semestre" class="pl-3">Semestre</label>
+			</div>
+			<div class="form-label-group col-md-6">
+			   <input type="text" id="terminoDoCurso" name="terminoDoCurso" class="form-control" placeholder="Término do curso" autofocus="" required>
+			   <label for="terminoDoCurso" class="pl-3">Término previsto do curso</label>
+			</div>
+		  </div>
+		  <button class="btn btn-primary float-right" name="btnFinalizar" type="submit">Finalizar cadastro</button>
+		</form>
 	  </div>
 
       <script src="js/jquery.js"></script>
