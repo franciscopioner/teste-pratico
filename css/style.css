@@ -11,21 +11,21 @@ body {
 	background-image: url("../imgs/bg.jpg");
 	background-repeat: no-repeat;
 	background-position: top;
-	background-size: cover;
+	background-size: auto;
 }
 
 .bg_finalizado {
 	background-image: url(../imgs/bg_04.jpg);
 	background-repeat: no-repeat;
 	background-position: top;
-	background-size: cover;
+	background-size: auto;
 }
 
 .bg_cadastro_completo {
 	background-image: url("../imgs/bg_02.jpg");
 	background-repeat: no-repeat;
 	background-position: top;
-	background-size: cover;
+	background-size: auto;
 }
 
 .bg_email_enviado {

@@ -62,16 +62,16 @@
 	  <script src="js/bootstrap-validate.js"></script>
 	  <!--<script src="js/bootstrap-validate-parametros.js"></script>-->
 	  
+	  <script>
+		bootstrapValidate('#dataNascimento', 'ISO8601:A data deve ser AAAA-MM-DD');
+		bootstrapValidate('#universadade', 'required:Selecione uma universidade');
+		bootstrapValidate('#curso', 'required:Preencha este campo');
+		bootstrapValidate('#campus', 'required:Preencha este campo');
+		bootstrapValidate('#turno', 'required:Preencha este campo');
+		bootstrapValidate('#semestre', 'required:Preencha este campo');
+		bootstrapValidate('#terminoDoCurso', 'ISO8601:A data deve ser AAAA-MM-DD');
+	 </script>
+	  
 
   </body>
 </html>
-
-	<script>
-		bootstrapValidate('#dataNascimento', 'ISO8601:A data deve ser AAAA-MM-DD');
-		bootstrapValidate('#universadade', 'required:Você deve selecionar uma universidade');
-		bootstrapValidate('#curso', 'required:Você deve preencher este campo');
-		bootstrapValidate('#campus', 'required:Você deve preencher este campo');
-		bootstrapValidate('#turno', 'required:Você deve preencher este campo');
-		bootstrapValidate('#semestre', 'required:Você deve preencher este campo');
-		bootstrapValidate('#terminoDoCurso', 'ISO8601:A data deve ser AAAA-MM-DD');
-	</script>
