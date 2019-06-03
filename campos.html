@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+</html>
+
+<script>
+  function validaCPF(cpf)
+  {
+    var numeros, digitos, soma, i, resultado, digitos_iguais;
+    digitos_iguais = 1;
+    if (cpf.length < 11)
+          return false;
+    for (i = 0; i < cpf.length - 1; i++)
+          if (cpf.charAt(i) != cpf.charAt(i + 1))
+                {
+                digitos_iguais = 0;
+                break;
+                }
+    if (!digitos_iguais)
+          {
+          numeros = cpf.substring(0,9);
+          digitos = cpf.substring(9);
+          soma = 0;
+          for (i = 10; i > 1; i--)
+                soma += numeros.charAt(10 - i) * i;
+          resultado = soma % 11 < 2 ? 0 : 11 - soma % 11;
+          if (resultado != digitos.charAt(0))
+                return false;
+          numeros = cpf.substring(0,10);
+          soma = 0;
+          for (i = 11; i > 1; i--)
+                soma += numeros.charAt(11 - i) * i;
+          resultado = soma % 11 < 2 ? 0 : 11 - soma % 11;
+          if (resultado != digitos.charAt(1))
+                return false;
+          return true;
+          }
+    else
+        return false;
+  }
+  function validacaoEmail(field) {
+        usuario = field.value.substring(0, field.value.indexOf("@"));
+        dominio = field.value.substring(field.value.indexOf("@")+ 1, field.value.length);
+        if ((usuario.length >=1) &&
+            (dominio.length >=3) && 
+            (usuario.search("@")==-1) && 
+            (dominio.search("@")==-1) &&
+            (usuario.search(" ")==-1) && 
+            (dominio.search(" ")==-1) &&
+            (dominio.search(".")!=-1) &&      
+            (dominio.indexOf(".") >=1)&& 
+            (dominio.lastIndexOf(".") < dominio.length - 1)) {
+            return true;
+        }
+        else{      
+            return false;  
+        }  
+    }
+    document.getElementById('myform').addEventListener('submit',customSubmit ,false);
+    function customSubmit(e){
+        e.stopPropagation();
+        e.preventDefault();
+        let mail = document.getElementById('email');
+        console.log(validacaoEmail(mail));
+        let cpf = document.getElementById('cpf').value;
+        console.log("email=",validacaoEmail(mail));
+        console.log("cpf=",validaCPF(cpf));
+        console.log("parou");
+        if(validacaoEmail(mail) && validaCPF(cpf)){
+            document.getElementById('myform').submit()
+        } else {
+            console.error('erro nos campos - tratar erros')
+        }
+    }
+
+</script>
